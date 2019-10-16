@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znsd.mall.mapper.CouponMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.znsd.mall.entity.Coupon">
+        <id column="couponId" property="couponId" />
+        <result column="productId" property="productId" />
+        <result column="brandId" property="brandId" />
+        <result column="categoryId" property="categoryId" />
+        <result column="couponMoney" property="couponMoney" />
+        <result column="couponTimeStart" property="couponTimeStart" />
+        <result column="couponTimeEnd" property="couponTimeEnd" />
+        <result column="couponMin" property="couponMin" />
+        <result column="couponType" property="couponType" />
+        <result column="integral" property="integral" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        couponId, productId, brandId, categoryId, couponMoney, couponTimeStart, couponTimeEnd, couponMin, couponType, integral
+    </sql>
+
+</mapper>
