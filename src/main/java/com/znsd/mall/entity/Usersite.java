@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Usersite extends Model<Usersite>  implements Serializable{
+public class Usersite extends Model<Usersite> {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,10 +28,6 @@ public class Usersite extends Model<Usersite>  implements Serializable{
      * 用户主键
      */
     private Integer userId;
-    /**
-     * 地址主键
-     */
-    private Integer addressId;
     /**
      * 收货人姓名
      */
@@ -48,6 +44,18 @@ public class Usersite extends Model<Usersite>  implements Serializable{
      * 详细地址
      */
     private String siteAddress;
+    /**
+     * 邮编
+     */
+    private String postcode;
+    /**
+     * 省份
+     */
+    private String receiverProvince;
+    /**
+     * 城市
+     */
+    private String receiverCity;
 
 
     public Integer getSiteId() {
@@ -64,14 +72,6 @@ public class Usersite extends Model<Usersite>  implements Serializable{
 
     public void setUserId(Integer userId) {
         this.userId = userId;
-    }
-
-    public Integer getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(Integer addressId) {
-        this.addressId = addressId;
     }
 
     public String getSiteName() {
@@ -106,6 +106,30 @@ public class Usersite extends Model<Usersite>  implements Serializable{
         this.siteAddress = siteAddress;
     }
 
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public String getReceiverProvince() {
+        return receiverProvince;
+    }
+
+    public void setReceiverProvince(String receiverProvince) {
+        this.receiverProvince = receiverProvince;
+    }
+
+    public String getReceiverCity() {
+        return receiverCity;
+    }
+
+    public void setReceiverCity(String receiverCity) {
+        this.receiverCity = receiverCity;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.siteId;
@@ -116,11 +140,13 @@ public class Usersite extends Model<Usersite>  implements Serializable{
         return "Usersite{" +
         "siteId=" + siteId +
         ", userId=" + userId +
-        ", addressId=" + addressId +
         ", siteName=" + siteName +
         ", sitePhone=" + sitePhone +
         ", siteStatu=" + siteStatu +
         ", siteAddress=" + siteAddress +
+        ", postcode=" + postcode +
+        ", receiverProvince=" + receiverProvince +
+        ", receiverCity=" + receiverCity +
         "}";
     }
 }

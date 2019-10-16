@@ -17,7 +17,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Coupon extends Model<Coupon>  implements Serializable{
+public class Coupon extends Model<Coupon> {
 
     private static final long serialVersionUID = 1L;
 

@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Category extends Model<Category>  implements Serializable{
+public class Category extends Model<Category> {
 
     private static final long serialVersionUID = 1L;
 

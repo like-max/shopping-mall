@@ -6,16 +6,18 @@
     <resultMap id="BaseResultMap" type="com.znsd.mall.entity.Usersite">
         <id column="siteId" property="siteId" />
         <result column="userId" property="userId" />
-        <result column="addressId" property="addressId" />
         <result column="siteName" property="siteName" />
         <result column="sitePhone" property="sitePhone" />
         <result column="siteStatu" property="siteStatu" />
         <result column="siteAddress" property="siteAddress" />
+        <result column="postcode" property="postcode" />
+        <result column="receiverProvince" property="receiverProvince" />
+        <result column="receiverCity" property="receiverCity" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        siteId, userId, addressId, siteName, sitePhone, siteStatu, siteAddress
+        siteId, userId, siteName, sitePhone, siteStatu, siteAddress, postcode, receiverProvince, receiverCity
     </sql>
 
 </mapper>

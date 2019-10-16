@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Shoppingcar extends Model<Shoppingcar>  implements Serializable{
+public class Shoppingcar extends Model<Shoppingcar> {
 
     private static final long serialVersionUID = 1L;
 
@@ -32,6 +32,10 @@ public class Shoppingcar extends Model<Shoppingcar>  implements Serializable{
      * 规格库存主键
      */
     private Integer stockId;
+    /**
+     * 用户主键
+     */
+    private Integer userId;
     /**
      * 购买数量
      */
@@ -62,6 +66,14 @@ public class Shoppingcar extends Model<Shoppingcar>  implements Serializable{
         this.stockId = stockId;
     }
 
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     public Integer getSum() {
         return sum;
     }
@@ -81,6 +93,7 @@ public class Shoppingcar extends Model<Shoppingcar>  implements Serializable{
         "shoppingCarId=" + shoppingCarId +
         ", productId=" + productId +
         ", stockId=" + stockId +
+        ", userId=" + userId +
         ", sum=" + sum +
         "}";
     }

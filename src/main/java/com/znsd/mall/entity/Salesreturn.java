@@ -1,6 +1,9 @@
 package com.znsd.mall.entity;
 
+import com.baomidou.mybatisplus.enums.IdType;
+import java.math.BigDecimal;
 import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -14,100 +17,72 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Salesreturn extends Model<Salesreturn>  implements Serializable{
+public class Salesreturn extends Model<Salesreturn> {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 订单id
+     * 退货表住址
+     */
+    @TableId(value = "salesReturnId", type = IdType.AUTO)
+    private Integer salesReturnId;
+    /**
+     * 用户主键
+     */
+    private Integer userId;
+    /**
+     * 商品订单id
      */
     private Integer orderId;
     /**
-     * 订单编号
-     */
-    private String orderSn;
-    /**
-     * 退货商品id
-     */
-    private String productId;
-    /**
-     * 退货数量
-     */
-    private Integer productCount;
-    /**
-     * 退货说明
-     */
-    private String reason;
-    /**
-     * 退货人姓名
-     */
-    private String returnName;
-    /**
-     * 退货人电话
-     */
-    private String returnPhone;
-    /**
-     * 退款方式
-     */
-    private Integer salesReturn;
-    /**
-     * 快递公司
-     */
-    private String exepressCompany;
-    /**
-     * 快递单号
-     */
-    private String courierNumber;
-    /**
-     * 凭证图片
-     */
-    private String proofPics;
-    /**
-     * 退货单号
-     */
-    private String returnSn;
-    /**
      * 退款金额
      */
-    private Double returnAmount;
+    private BigDecimal orderMoney;
     /**
      * 申请时间
      */
-    private Date createTime;
+    private Date applyForTime;
     /**
-     * 退货状态
+     * 审核结果   0.审核成功，待顾客退货 ，1.已退款，2，拒绝退货
      */
-    private Integer status;
+    private Integer ordeRresult;
     /**
-     * 审核状态
+     * 客服备注
      */
-    private Integer audit;
+    private String remarks;
     /**
-     * 备注
+     * 收件人
      */
-    private String handleNote;
+    private String linkman;
     /**
-     * 收货人
+     * 电话
      */
-    private String receiveMan;
+    private String phone;
     /**
-     * 收货时间
+     * 地址
      */
-    private Date receiveTime;
+    private String address;
     /**
-     * 收货地址
+     * 退货订单号
      */
-    private Integer addresId;
-    /**
-     * 订单退货id
-     */
-    @TableId(value = "orderStatusId", type = IdType.AUTO)
-    private String orderStatusId;
-    /**
-     * 退货原因
-     */
-    private Integer orderCause;
+    private String orderNumber;
 
+
+    public Integer getSalesReturnId() {
+        return salesReturnId;
+    }
+
+    public void setSalesReturnId(Integer salesReturnId) {
+        this.salesReturnId = salesReturnId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public Integer getOrderId() {
         return orderId;
@@ -117,204 +92,89 @@ public class Salesreturn extends Model<Salesreturn>  implements Serializable{
         this.orderId = orderId;
     }
 
-    public String getOrderSn() {
-        return orderSn;
+    public BigDecimal getOrderMoney() {
+        return orderMoney;
     }
 
-    public void setOrderSn(String orderSn) {
-        this.orderSn = orderSn;
+    public void setOrderMoney(BigDecimal orderMoney) {
+        this.orderMoney = orderMoney;
     }
 
-    public String getProductId() {
-        return productId;
+    public Date getApplyForTime() {
+        return applyForTime;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setApplyForTime(Date applyForTime) {
+        this.applyForTime = applyForTime;
     }
 
-    public Integer getProductCount() {
-        return productCount;
+    public Integer getOrdeRresult() {
+        return ordeRresult;
     }
 
-    public void setProductCount(Integer productCount) {
-        this.productCount = productCount;
+    public void setOrdeRresult(Integer ordeRresult) {
+        this.ordeRresult = ordeRresult;
     }
 
-    public String getReason() {
-        return reason;
+    public String getRemarks() {
+        return remarks;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
     }
 
-    public String getReturnName() {
-        return returnName;
+    public String getLinkman() {
+        return linkman;
     }
 
-    public void setReturnName(String returnName) {
-        this.returnName = returnName;
+    public void setLinkman(String linkman) {
+        this.linkman = linkman;
     }
 
-    public String getReturnPhone() {
-        return returnPhone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setReturnPhone(String returnPhone) {
-        this.returnPhone = returnPhone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public Integer getSalesReturn() {
-        return salesReturn;
+    public String getAddress() {
+        return address;
     }
 
-    public void setSalesReturn(Integer salesReturn) {
-        this.salesReturn = salesReturn;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getExepressCompany() {
-        return exepressCompany;
+    public String getOrderNumber() {
+        return orderNumber;
     }
 
-    public void setExepressCompany(String exepressCompany) {
-        this.exepressCompany = exepressCompany;
-    }
-
-    public String getCourierNumber() {
-        return courierNumber;
-    }
-
-    public void setCourierNumber(String courierNumber) {
-        this.courierNumber = courierNumber;
-    }
-
-    public String getProofPics() {
-        return proofPics;
-    }
-
-    public void setProofPics(String proofPics) {
-        this.proofPics = proofPics;
-    }
-
-    public String getReturnSn() {
-        return returnSn;
-    }
-
-    public void setReturnSn(String returnSn) {
-        this.returnSn = returnSn;
-    }
-
-    public Double getReturnAmount() {
-        return returnAmount;
-    }
-
-    public void setReturnAmount(Double returnAmount) {
-        this.returnAmount = returnAmount;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Integer getAudit() {
-        return audit;
-    }
-
-    public void setAudit(Integer audit) {
-        this.audit = audit;
-    }
-
-    public String getHandleNote() {
-        return handleNote;
-    }
-
-    public void setHandleNote(String handleNote) {
-        this.handleNote = handleNote;
-    }
-
-    public String getReceiveMan() {
-        return receiveMan;
-    }
-
-    public void setReceiveMan(String receiveMan) {
-        this.receiveMan = receiveMan;
-    }
-
-    public Date getReceiveTime() {
-        return receiveTime;
-    }
-
-    public void setReceiveTime(Date receiveTime) {
-        this.receiveTime = receiveTime;
-    }
-
-    public Integer getAddresId() {
-        return addresId;
-    }
-
-    public void setAddresId(Integer addresId) {
-        this.addresId = addresId;
-    }
-
-    public String getOrderStatusId() {
-        return orderStatusId;
-    }
-
-    public void setOrderStatusId(String orderStatusId) {
-        this.orderStatusId = orderStatusId;
-    }
-
-    public Integer getOrderCause() {
-        return orderCause;
-    }
-
-    public void setOrderCause(Integer orderCause) {
-        this.orderCause = orderCause;
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     @Override
     protected Serializable pkVal() {
-        return this.orderStatusId;
+        return this.salesReturnId;
     }
 
     @Override
     public String toString() {
         return "Salesreturn{" +
-        "orderId=" + orderId +
-        ", orderSn=" + orderSn +
-        ", productId=" + productId +
-        ", productCount=" + productCount +
-        ", reason=" + reason +
-        ", returnName=" + returnName +
-        ", returnPhone=" + returnPhone +
-        ", salesReturn=" + salesReturn +
-        ", exepressCompany=" + exepressCompany +
-        ", courierNumber=" + courierNumber +
-        ", proofPics=" + proofPics +
-        ", returnSn=" + returnSn +
-        ", returnAmount=" + returnAmount +
-        ", createTime=" + createTime +
-        ", status=" + status +
-        ", audit=" + audit +
-        ", handleNote=" + handleNote +
-        ", receiveMan=" + receiveMan +
-        ", receiveTime=" + receiveTime +
-        ", addresId=" + addresId +
-        ", orderStatusId=" + orderStatusId +
-        ", orderCause=" + orderCause +
+        "salesReturnId=" + salesReturnId +
+        ", userId=" + userId +
+        ", orderId=" + orderId +
+        ", orderMoney=" + orderMoney +
+        ", applyForTime=" + applyForTime +
+        ", ordeRresult=" + ordeRresult +
+        ", remarks=" + remarks +
+        ", linkman=" + linkman +
+        ", phone=" + phone +
+        ", address=" + address +
+        ", orderNumber=" + orderNumber +
         "}";
     }
 }

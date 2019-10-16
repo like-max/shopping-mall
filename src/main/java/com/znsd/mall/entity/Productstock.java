@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Productstock extends Model<Productstock>  implements Serializable{
+public class Productstock extends Model<Productstock> {
 
     private static final long serialVersionUID = 1L;
 

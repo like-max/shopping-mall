@@ -7,12 +7,13 @@
         <id column="shoppingCarId" property="shoppingCarId" />
         <result column="productId" property="productId" />
         <result column="stockId" property="stockId" />
+        <result column="userId" property="userId" />
         <result column="sum" property="sum" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        shoppingCarId, productId, stockId, sum
+        shoppingCarId, productId, stockId, userId, sum
     </sql>
 
 </mapper>

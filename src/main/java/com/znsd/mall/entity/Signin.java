@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Signin extends Model<Signin>  implements Serializable{
+public class Signin extends Model<Signin> {
 
     private static final long serialVersionUID = 1L;
 

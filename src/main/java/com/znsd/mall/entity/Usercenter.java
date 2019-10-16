@@ -16,7 +16,7 @@ import java.io.Serializable;
  * @author ${author}
  * @since 2019-10-16
  */
-public class Usercenter extends Model<Usercenter>  implements Serializable{
+public class Usercenter extends Model<Usercenter> {
 
     private static final long serialVersionUID = 1L;
 

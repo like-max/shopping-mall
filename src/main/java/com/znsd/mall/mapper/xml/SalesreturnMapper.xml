@@ -4,33 +4,22 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.znsd.mall.entity.Salesreturn">
-        <id column="orderStatusId" property="orderStatusId" />
+        <id column="salesReturnId" property="salesReturnId" />
+        <result column="userId" property="userId" />
         <result column="orderId" property="orderId" />
-        <result column="orderSn" property="orderSn" />
-        <result column="productId" property="productId" />
-        <result column="productCount" property="productCount" />
-        <result column="reason" property="reason" />
-        <result column="returnName" property="returnName" />
-        <result column="returnPhone" property="returnPhone" />
-        <result column="salesReturn" property="salesReturn" />
-        <result column="exepressCompany" property="exepressCompany" />
-        <result column="courierNumber" property="courierNumber" />
-        <result column="proofPics" property="proofPics" />
-        <result column="returnSn" property="returnSn" />
-        <result column="returnAmount" property="returnAmount" />
-        <result column="createTime" property="createTime" />
-        <result column="status" property="status" />
-        <result column="audit" property="audit" />
-        <result column="handleNote" property="handleNote" />
-        <result column="receiveMan" property="receiveMan" />
-        <result column="receiveTime" property="receiveTime" />
-        <result column="addresId" property="addresId" />
-        <result column="orderCause" property="orderCause" />
+        <result column="orderMoney" property="orderMoney" />
+        <result column="applyForTime" property="applyForTime" />
+        <result column="ordeRresult" property="ordeRresult" />
+        <result column="remarks" property="remarks" />
+        <result column="linkman" property="linkman" />
+        <result column="phone" property="phone" />
+        <result column="address" property="address" />
+        <result column="orderNumber" property="orderNumber" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        orderId, orderSn, productId, productCount, reason, returnName, returnPhone, salesReturn, exepressCompany, courierNumber, proofPics, returnSn, returnAmount, createTime, status, audit, handleNote, receiveMan, receiveTime, addresId, orderStatusId, orderCause
+        salesReturnId, userId, orderId, orderMoney, applyForTime, ordeRresult, remarks, linkman, phone, address, orderNumber
     </sql>
 
 </mapper>
