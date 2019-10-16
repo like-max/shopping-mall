@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.znsd.mall.mapper.PmsproductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.znsd.mall.entity.Pmsproduct">
+        <id column="productId" property="productId" />
+        <result column="brandId" property="brandId" />
+        <result column="categoryId" property="categoryId" />
+        <result column="deleteStatus" property="deleteStatus" />
+        <result column="publishStatus" property="publishStatus" />
+        <result column="verifyStatus" property="verifyStatus" />
+        <result column="sale" property="sale" />
+        <result column="price" property="price" />
+        <result column="discount" property="discount" />
+        <result column="giftPoint" property="giftPoint" />
+        <result column="mainTitle" property="mainTitle" />
+        <result column="description" property="description" />
+        <result column="stockSum" property="stockSum" />
+        <result column="keywords" property="keywords" />
+        <result column="promotionStartTime" property="promotionStartTime" />
+        <result column="promotionEndTime" property="promotionEndTime" />
+        <result column="promotionType" property="promotionType" />
+        <result column="promotionDiscount" property="promotionDiscount" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        productId, brandId, categoryId, deleteStatus, publishStatus, verifyStatus, sale, price, discount, giftPoint, mainTitle, description, stockSum, keywords, promotionStartTime, promotionEndTime, promotionType, promotionDiscount
+    </sql>
+
+</mapper>
